@@ -1,0 +1,24 @@
+{
+  "demo_cases": [
+    {
+      "slug": "jobcenter-mitwirkung",
+      "authority": "Jobcenter Musterstadt",
+      "subject": "Aufforderung zur Mitwirkung",
+      "deadline": "30.04.2025",
+      "summary": "Die Behörde bittet um Unterlagen. Innerhalb der genannten Frist reagieren oder frühzeitig mehr Zeit anfragen.",
+      "confidence": "medium"
+    }
+  ],
+  "demo_questions": [
+    {
+      "prompt": "Muss ich Kontoauszüge einreichen?",
+      "answer": "Das hängt vom konkreten Schreiben und der Begründung der Behörde ab. Prüfen Sie, welche Zeiträume und Unterlagen genau genannt sind.",
+      "source_note": "Offizielle Quelle wird in der nächsten Version verknüpft."
+    },
+    {
+      "prompt": "Kann ich eine Fristverlängerung beantragen?",
+      "answer": "Sie können die Behörde in der Regel frühzeitig schriftlich um mehr Zeit bitten. Begründen Sie kurz, warum Sie die Unterlagen noch nicht vollständig einreichen können.",
+      "source_note": "Offizielle Quelle wird in der nächsten Version verknüpft."
+    }
+  ]
+}
