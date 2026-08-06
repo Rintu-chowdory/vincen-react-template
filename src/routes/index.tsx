@@ -6,6 +6,7 @@ import {
   Settings, ShieldCheck, Sparkles, Upload, UserRound,
 } from "lucide-react";
 import { site } from "@/content/site";
+import { DashboardScene } from "@/components/3d/dashboard-scene";
 
 export const Route = createFileRoute("/")({ component: CivicDashboard });
 
@@ -61,7 +62,13 @@ function CivicDashboard() {
         <div className="content">
           <section id="dashboard" className="hero">
             <div><div className="eyebrow">CivicAI · Klarheit im Alltag</div><h1>Behörden verstehen. Rechte kennen. Sicher handeln.</h1><p className="hero-copy">CivicAI hilft Ihnen, offizielle Schreiben verständlich einzuordnen und die nächsten Schritte vorzubereiten. Ruhig, transparent und in klarer Sprache.</p><div className="hero-actions"><button type="button" className="primary-btn" onClick={openAnalysis}>Brief analysieren <ArrowRight size={16} /></button><button type="button" className="secondary-btn" onClick={() => goTo("coach")}>Frage stellen</button></div></div>
-            <div className="hero-panel"><div className="panel-top"><div><div className="eyebrow">Ihr nächster Schritt</div><h3 style={{ marginTop: 6 }}>Ein Schreiben einordnen</h3></div><span className="panel-tag">Sicher & klar</span></div><div className="scan-paper"><span className="scan-icon"><FileText size={20} /></span><strong>Brief hier ablegen</strong><p>PDF, DOCX oder Bild auswählen. Die Demo zeigt anschließend eine Beispielanalyse.</p><button type="button" className="file-button" onClick={openAnalysis}>Demo-Analyse öffnen</button></div></div>
+            <div className="hero-panel">
+              <div className="panel-top"><div><div className="eyebrow">Ihr nächster Schritt</div><h3 style={{ marginTop: 6 }}>Ein Schreiben einordnen</h3></div><span className="panel-tag">Sicher & klar</span></div>
+              <div className="hero-panel-grid">
+                <div className="scan-paper"><span className="scan-icon"><FileText size={20} /></span><strong>Brief hier ablegen</strong><p>PDF, DOCX oder Bild auswählen. Die Demo zeigt anschließend eine Beispielanalyse.</p><button type="button" className="file-button" onClick={openAnalysis}>Demo-Analyse öffnen</button></div>
+                <DashboardScene />
+              </div>
+            </div>
           </section>
 
           <section className="stats" aria-label="Zusammenfassung"><div className="stat-card"><div className="stat-value">3</div><div className="stat-label">offene Fristen</div></div><div className="stat-card"><div className="stat-value">2</div><div className="stat-label">analysierte Schreiben</div></div><div className="stat-card"><div className="stat-value">1</div><div className="stat-label">Antwortentwurf</div></div></section>
