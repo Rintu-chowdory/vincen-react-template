@@ -14,8 +14,10 @@ import path from "node:path";
 // point at the bucket root and the preview would render blank. The home
 // page renders correctly this way; deep client-side routes only resolve when
 // the site is served from a path root (the publish/R2 path sets its own base).
+const base = process.env.BASE_URL ?? "./";
+
 export default defineConfig({
-  base: "./",
+  base,
   plugins: [
     tanstackRouter({ target: "react", autoCodeSplitting: true }), // file-based routes → routeTree.gen.ts
     react(),
